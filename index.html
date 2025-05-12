@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTWIST Form | Frontend Assignment</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/form.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <h1>NTWIST</h1>
+            <ul>
+                <li><a href="index.html" class="active">Form</a></li>
+                <li><a href="sort.html">Sort</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+                <p>This is a fixed-width sidebar as requested in the requirements.</p>
+                <p>It contains some information about the form:</p>
+                <ul>
+                    <li>Fill out all fields</li>
+                    <li>Email must be valid</li>
+                    <li>Message is required</li>
+                </ul>
+                <div class="form-stats">
+                    <p>Time spent: <span id="time-spent">0s</span></p>
+                </div>
+            </aside>
+            
+            <main>
+                <h2>Responsive Form with Validation</h2>
+                <div id="form-response" class="hidden">
+                    <div class="success-message">
+                        <h3>Form submitted successfully!</h3>
+                        <p>Thank you for your submission.</p>
+                        <button id="new-form">Submit another form</button>
+                    </div>
+                </div>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group star-rating-container">
+                        <label>Rate your experience (optional)</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5" title="5 stars">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star">★</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 NTWIST Frontend Assignment</p>
+        </footer>
+    </div>
+
+    <script src="/form.js"></script>
+</body>
+</html>

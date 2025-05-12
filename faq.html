@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTWIST FAQ | Frontend Assignment</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/faq.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <h1>NTWIST</h1>
+            <ul>
+                <li><a href="index.html">Form</a></li>
+                <li><a href="sort.html">Sort</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <main class="faq-main">
+                <h2>FAQ Accordion (No JavaScript)</h2>
+                <p>Click on a question to see the answer. This accordion is built using only HTML and CSS without JavaScript.</p>
+                
+                <div class="faq-accordion">
+                    <!-- Method 1: Using details/summary -->
+                    <h3>Method 1: Using details/summary</h3>
+                    
+                    <details>
+                        <summary>What is NTWIST?</summary>
+                        <div class="details-content">
+                            <p>NTWIST is a software company that specializes in industrial optimization and AI solutions. They help companies improve their operational efficiency and reduce costs through advanced analytics and machine learning.</p>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>What services does NTWIST offer?</summary>
+                        <div class="details-content">
+                            <p>NTWIST offers a variety of services including predictive maintenance, process optimization, energy efficiency solutions, and custom AI development for industrial applications.</p>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>How can I contact NTWIST?</summary>
+                        <div class="details-content">
+                            <p>You can contact NTWIST through their official website, email, or phone. They also have a contact form where you can submit your inquiries directly.</p>
+                        </div>
+                    </details>
+
+                    <!-- Method 2: Using input + label + CSS only -->
+                    <h3>Method 2: Using input + label + CSS</h3>
+                    
+                    <div class="css-accordion">
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion1" class="accordion-checkbox">
+                            <label for="accordion1" class="accordion-label">What technologies does NTWIST use?</label>
+                            <div class="accordion-content">
+                                <p>NTWIST uses a combination of technologies including machine learning, data science, cloud computing, and custom algorithms to deliver their solutions. They often work with technologies like Python, TensorFlow, and various cloud platforms.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion2" class="accordion-checkbox">
+                            <label for="accordion2" class="accordion-label">What industries does NTWIST serve?</label>
+                            <div class="accordion-content">
+                                <p>NTWIST primarily serves industries such as mining, manufacturing, oil and gas, and other industrial sectors that can benefit from AI-driven optimization and efficiency improvements.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <input type="checkbox" id="accordion3" class="accordion-checkbox">
+                            <label for="accordion3" class="accordion-label">Is NTWIST hiring developers?</label>
+                            <div class="accordion-content">
+                                <p>NTWIST regularly hires talented developers, data scientists, and engineers. You can check their careers page for current openings or submit your resume for future opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 NTWIST Frontend Assignment</p>
+        </footer>
+    </div>
+</body>
+</html>

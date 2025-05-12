@@ -1,0 +1,140 @@
+.faq-main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-accordion {
+    margin: 2rem 0;
+}
+
+.faq-accordion h3 {
+    margin: 2rem 0 1rem;
+    color: var(--secondary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Method 1: Using details/summary */
+details {
+    background-color: white;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+summary {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+summary:hover {
+    background-color: #f9f9f9;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.details-content {
+    padding: 0 1rem 1rem;
+    animation: fadeDown 0.5s ease-out;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Method 2: Using input + label + CSS */
+.css-accordion {
+    margin-top: 1rem;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.accordion-checkbox {
+    display: none;
+}
+
+.accordion-label {
+    display: block;
+    padding: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-label:hover {
+    background-color: #f9f9f9;
+}
+
+.accordion-label::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-checkbox:checked ~ .accordion-label::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.accordion-checkbox:checked ~ .accordion-content {
+    max-height: 500px;
+    padding: 0 1rem 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .faq-accordion {
+        margin: 1rem 0;
+    }
+    
+    summary, .accordion-label {
+        padding: 0.75rem;
+    }
+    
+    .details-content, .accordion-checkbox:checked ~ .accordion-content {
+        padding: 0 0.75rem 0.75rem;
+    }
+}

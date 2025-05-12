@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTWIST Sort | Frontend Assignment</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/sort.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <h1>NTWIST</h1>
+            <ul>
+                <li><a href="index.html">Form</a></li>
+                <li><a href="sort.html" class="active">Sort</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+                <p>This is a fixed-width sidebar as requested in the requirements.</p>
+                <p>Click the button below to sort the list alphabetically:</p>
+                <button id="sort-button">Sort List</button>
+                <button id="reset-button">Reset List</button>
+            </aside>
+            
+            <main>
+                <h2>Sortable List Viewer</h2>
+                <p>Here's a list of names that can be sorted alphabetically:</p>
+                
+                <ul id="name-list">
+                    <li>Rajesh Kumar</li>
+                    <li>Aaradhya Sharma</li>
+                    <li>Vikram Patel</li>
+                    <li>Ananya Gupta</li>
+                    <li>Ravi Verma</li>
+                    <li>Priya Desai</li>
+                    <li>Arjun Reddy</li>
+                    <li>Sanya Mehra</li>
+                    <li>Devansh Singh</li>
+                    <li>Isha Kapoor</li>
+                </ul>
+                
+                <div class="sort-status">
+                    <p id="sort-message">List is in original order</p>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 NTWIST Frontend Assignment</p>
+        </footer>
+    </div>
+
+    <script src="/sort.js"></script>
+</body>
+</html>
